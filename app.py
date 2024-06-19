@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error,accuracy_score
 
 # Load historical stock data (assuming you have a CSV file)
-data = yf.download('AAPL', start='2020-01-01', end='2024-01-01')
+data = pd.read_csv("/Dataset/ADANIPORTS.csv")
 
 # Preprocess the data
 data['Diff'] = data['Close'] - data['Open']
